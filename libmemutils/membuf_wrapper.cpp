@@ -27,6 +27,7 @@
 * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#include <android/log.h>
 #include <linux/mem-buf.h>
 #include <linux/msm_ion_ids.h>
 #include <errno.h>
