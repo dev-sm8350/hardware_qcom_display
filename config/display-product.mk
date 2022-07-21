@@ -96,7 +96,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.high_fps_late_sf_phase_offset_ns=-2000000 \
     debug.sf.high_fps_early_phase_offset_ns=-4000000 \
     debug.sf.high_fps_early_gl_phase_offset_ns=-2000000 \
-    debug.sf.disable_backpressure=1
+    debug.sf.disable_backpressure=1 \
+    debug.sf.predict_hwc_composition_strategy=0
 
 # Enable offline rotator for Bengal.
 ifneq ($(TARGET_BOARD_PLATFORM),bengal)
