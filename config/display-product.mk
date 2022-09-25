@@ -205,6 +205,10 @@ ifeq ($(call is-vendor-board-platform,QCOM),true)
     SOONG_CONFIG_qtidisplay_displayconfig_enabled := true
 endif
 
+ifeq ($(TARGET_USES_FOD_ZPOS), true)
+    SOONG_CONFIG_qtidisplay_udfps_enabled := true
+endif
+
 ifeq ($(TARGET_IS_HEADLESS), true)
     PRODUCT_SOONG_NAMESPACES += $(DISPLAY_HAL_DIR)/qmaa
     SOONG_CONFIG_qtidisplay_headless := true
