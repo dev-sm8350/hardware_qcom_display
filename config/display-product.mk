@@ -184,6 +184,10 @@ SOONG_CONFIG_qtidisplay_gralloc4 := true
 SOONG_CONFIG_qtidisplay_udfps := false
 SOONG_CONFIG_qtidisplay_default := true
 
+ifeq ($(TARGET_USES_FOD_ZPOS), true)
+    SOONG_CONFIG_qtidisplay_udfps := true
+endif
+
 ifeq ($(TARGET_IS_HEADLESS), true)
     PRODUCT_SOONG_NAMESPACES += $(DISPLAY_HAL_DIR)/qmaa
     SOONG_CONFIG_qtidisplay_headless := true
